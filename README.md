@@ -8,14 +8,14 @@ Because the user has explicitly asked for a preference why not let them enjoy a 
 
 ![Swap Demo](http://giphygifs.s3.amazonaws.com/media/Y08TdetQESfoSKWEUE/giphy.gif)
 
-[demo page](https://use-color-scheme-demo.jcblw.now.sh/)
+[demo page](https://ucs.mujō.com/) => [source code](https://github.com/jcblw/use-color-scheme-demo)
 
 ## Technology Used
 
 - [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
 - [prefers-color-scheme](https://caniuse.com/#search=prefers-color-scheme)
 
-> Prefers color scheme media query is still very new and not supported on all browsers, please see link for latest support.
+> Prefers color scheme media query is still very new and not supported on all browsers, please see link for latest support. It will be available in [Chrome (stable) July 30th 2019](https://www.chromestatus.com/features/schedule)
 
 ## Install
 
@@ -27,8 +27,11 @@ yarn add use-color-scheme
 
 ## Usage
 
+It is a React hook! So import the hook then place it in the render function of a component.
+
 ```jsx
 import React from 'react'
+import { useColorScheme } from 'use-color-scheme'
 
 const modes = {
   dark: { background: 'black', color: 'white' },

@@ -14,9 +14,15 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run build && nyc ava",
-    "build": "babel src --out-dir dist",
-    "lint": "eslint {src,test}/*.js"
+    "build:cjs": "babel src/index.js --out-file dist/index.cjs.js",
+    "lint": "eslint {src,test}/*.js",
+    "build:umd": "rollup src/index.js --format umd --name \"useColorScheme\" --file dist/index.umd.js",
+    "build:umd:compile": "babel dist/index.umd.js --out-file dist/index.umd.js",
+    "build": "rm -rf dist && mkdir dist && npm run build:cjs && npm run build:umd && npm run build:umd:compile"
   },
+  "files": [
+    "dist/*"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -32,7 +38,8 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-hooks-testing-library": "^0.5.1",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "rollup": "^1.15.5"
   },
   "peerDependencies": {
     "react": "^16.8.6"
@@ -40,6 +47,18 @@
   "ava": {
     "require": [
       "./test/_setup-test.js"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
