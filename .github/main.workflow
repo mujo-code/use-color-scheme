@@ -1,6 +1,6 @@
 workflow "Build and Test" {
   on = "push"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["Test"]
 }
 
 action "Install" {
