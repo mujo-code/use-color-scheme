@@ -25,6 +25,14 @@ npm install use-color-scheme --save
 yarn add use-color-scheme
 ```
 
+or just include it in your browser.
+
+```html
+<script src="https://unpkg.com/use-color-scheme@1.1.1"></script>
+```
+
+> React > 16.8.6 is a peer dependency and will need to installed/included as well.
+
 ## Usage
 
 It is a React hook! So import the hook then place it in the render function of a component.
