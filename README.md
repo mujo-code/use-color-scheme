@@ -50,6 +50,8 @@ export const MyComponent = () => {
 }
 ```
 
+[Try it out in CodePen](https://codepen.io/jcblw/pen/JQGmEK)
+
 ## Useful Links
 
 [Original Inspiration](https://www.freecodecamp.org/news/how-to-detect-a-users-preferred-color-scheme-in-javascript-ec8ee514f1ef/)
