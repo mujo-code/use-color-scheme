@@ -11,7 +11,17 @@
     "prefers-color-scheme",
     "color-scheme"
   ],
+  "homepage": "https://github.com/jcblw/use-color-scheme#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcblw/use-color-scheme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcblw/use-color-scheme/issues"
+  },
   "main": "dist/index.js",
+  "unpkg": "dist/use-color-scheme.min.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "test": "npm run build && nyc ava",
     "build:cjs": "babel src/index.js --out-file dist/index.cjs.js",
@@ -28,10 +38,12 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "ava": "^2.1.0",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-es2015-function-name": "^6.24.1",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-register": "^7.0.0",
     "browser-env": "^3.2.6",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -50,6 +62,7 @@
   },
   "ava": {
     "require": [
+      "@babel/register",
       "./test/_setup-test.js"
     ]
   },
