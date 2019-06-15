@@ -6,6 +6,10 @@ This is a React hook that allows you to hook into the browsers detection of colo
 
 Because the user has explicitly asked for a preference why not let them enjoy a dark version of your application. 🌚
 
+![Swap Demo](http://giphygifs.s3.amazonaws.com/media/Y08TdetQESfoSKWEUE/giphy.gif)
+
+[demo page](https://use-color-scheme-demo.jcblw.now.sh/)
+
 ## Technology Used
 
 - [window.matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia)
