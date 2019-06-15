@@ -1,6 +1,6 @@
 {
   "name": "use-color-scheme",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React Hook to get users prefered color scheme",
   "keywords": [
     "react",
@@ -11,19 +11,38 @@
     "prefers-color-scheme",
     "color-scheme"
   ],
+  "homepage": "https://github.com/jcblw/use-color-scheme#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcblw/use-color-scheme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcblw/use-color-scheme/issues"
+  },
   "main": "dist/index.js",
+  "unpkg": "dist/use-color-scheme.min.js",
+  "module": "dist/index.es.js",
   "scripts": {
     "test": "npm run build && nyc ava",
-    "build": "babel src --out-dir dist",
-    "lint": "eslint {src,test}/*.js"
+    "build:cjs": "babel src/index.js --out-file dist/index.cjs.js",
+    "lint": "eslint {src,test}/*.js",
+    "build:script": "node scripts/build.js",
+    "build": "rm -rf dist && mkdir dist && npm run build:script"
   },
-  "author": "",
+  "files": [
+    "dist/*"
+  ],
+  "author": "Jacob Lowe",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "ava": "^2.1.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-function-name": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "browser-env": "^3.2.6",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -32,14 +51,33 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-hooks-testing-library": "^0.5.1",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "rollup": "^1.15.5",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-uglify": "^6.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.6"
   },
   "ava": {
     "require": [
+      "@babel/register",
       "./test/_setup-test.js"
     ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "external": {
+    "react": "React"
   }
 }

@@ -6,7 +6,7 @@ import {
   getPreference,
   values,
   PREFERENCES,
-} from '../dist'
+} from '../src'
 
 test('the makeQuery function', t => {
   t.is(makeQuery('foo'), '(prefers-color-scheme: foo)')
