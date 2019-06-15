@@ -1,6 +1,6 @@
 {
   "name": "use-color-scheme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React Hook to get users prefered color scheme",
   "keywords": [
     "react",
@@ -27,10 +27,11 @@
     "build:cjs": "babel src/index.js --out-file dist/index.cjs.js",
     "lint": "eslint {src,test}/*.js",
     "build:script": "node scripts/build.js",
-    "build": "rm -rf dist && mkdir dist && npm run build:script"
+    "build": "rm -rf dist && mkdir dist && npm run build:script",
+    "prepublish": "npm run build"
   },
   "files": [
-    "dist/*"
+    "dist/**/*"
   ],
   "author": "Jacob Lowe",
   "license": "ISC",
