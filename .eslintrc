@@ -1,0 +1,35 @@
+{
+  "extends": ["plugin:react/recommended"],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "rules": {
+    "object-curly-newline": ["error", { "multiline": true }],
+    "function-paren-newline": 0,
+    "max-len": ["error", { "code": 80, "tabWidth": 2 }],
+    "linebreak-style": ["error", "unix"],
+    "no-cond-assign": ["error", "always"],
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "always-multiline"],
+    "arrow-body-style": ["error", "as-needed"],
+    "implicit-arrow-linebreak": 0,
+    "no-unused-vars": "error",
+    "no-console": "off",
+    "react/prop-types": 0,
+    "prettier/prettier": "error",
+    "semi": ["error", "never"]
+  },
+  "globals": {
+    "context": "readonly",
+    "it": "readonly",
+    "cy": "readonly",
+    "Cypress": "readonly",
+    "gtag": "readonly"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

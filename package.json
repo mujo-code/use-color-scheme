@@ -1,0 +1,44 @@
+{
+  "name": "use-color-scheme",
+  "version": "1.0.0",
+  "description": "React Hook to get users prefered color scheme",
+  "keywords": [
+    "react",
+    "hooks",
+    "react hooks",
+    "dark mode",
+    "light mode",
+    "prefers-color-scheme",
+    "color-scheme"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run build && nyc ava",
+    "build": "babel src --out-dir dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "ava": "^2.1.0",
+    "browser-env": "^3.2.6",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "nyc": "^14.1.1",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-hooks-testing-library": "^0.5.1",
+    "react-test-renderer": "^16.8.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "ava": {
+    "require": [
+      "./test/_setup-test.js"
+    ]
+  }
+}
