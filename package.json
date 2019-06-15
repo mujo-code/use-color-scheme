@@ -16,20 +16,22 @@
     "test": "npm run build && nyc ava",
     "build:cjs": "babel src/index.js --out-file dist/index.cjs.js",
     "lint": "eslint {src,test}/*.js",
-    "build:umd": "rollup src/index.js --format umd --name \"useColorScheme\" --file dist/index.umd.js",
-    "build:umd:compile": "babel dist/index.umd.js --out-file dist/index.umd.js",
-    "build": "rm -rf dist && mkdir dist && npm run build:cjs && npm run build:umd && npm run build:umd:compile"
+    "build:script": "node scripts/build.js",
+    "build": "rm -rf dist && mkdir dist && npm run build:script"
   },
   "files": [
     "dist/*"
   ],
-  "author": "",
+  "author": "Jacob Lowe",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "ava": "^2.1.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-function-name": "^6.24.1",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "browser-env": "^3.2.6",
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
@@ -39,7 +41,9 @@
     "react": "^16.8.6",
     "react-hooks-testing-library": "^0.5.1",
     "react-test-renderer": "^16.8.6",
-    "rollup": "^1.15.5"
+    "rollup": "^1.15.5",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-uglify": "^6.0.2"
   },
   "peerDependencies": {
     "react": "^16.8.6"
@@ -60,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "external": {
+    "react": "React"
   }
 }
