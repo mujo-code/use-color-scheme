@@ -1,5 +1,5 @@
 import test from 'ava'
-import { renderHook } from 'react-hooks-testing-library'
+import { renderHook } from '@testing-library/react-hooks'
 import { useColorScheme, PREFERENCES, makeQuery } from '../src'
 import { createMatchMedia } from './_match-media-shim'
 

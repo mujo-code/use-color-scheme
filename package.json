@@ -20,6 +20,7 @@
     "url": "https://github.com/jcblw/use-color-scheme/issues"
   },
   "main": "dist/index.js",
+  "types": "types/lib/main.d.ts",
   "unpkg": "dist/use-color-scheme.min.js",
   "module": "dist/index.es.js",
   "scripts": {
@@ -31,7 +32,8 @@
     "prepublish": "npm run build"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "types/lib/main.d.ts"
   ],
   "author": "Jacob Lowe",
   "license": "ISC",
@@ -40,6 +42,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
+    "@testing-library/react-hooks": "^5.1.2",
     "ava": "^2.1.0",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-es2015-function-name": "^6.24.1",
@@ -50,15 +53,16 @@
     "eslint-plugin-react": "^7.13.0",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
-    "react": "^16.8.6",
-    "react-hooks-testing-library": "^0.6.0",
+    "react": "17.*",
+    "react-dom": "17.*",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.15.5",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-uglify": "^6.0.2"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   },
   "ava": {
     "require": [
