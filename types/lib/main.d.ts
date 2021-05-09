@@ -1,8 +1,11 @@
-type ColorScheme = 'light' | 'dark' | 'none'
+export type ColorScheme = 'light' | 'dark' | 'none'
 
 interface SchemeReturn {
   scheme: ColorScheme
 }
 
-export const useColorScheme = () => SchemeReturn
-export const getPreference = (preferences: Array<ColorScheme>) => ColorScheme
+type UseColorScheme = () => SchemeReturn
+type GetPreference = (preferences: Array<ColorScheme>) => ColorScheme
+
+export const useColorScheme: UseColorScheme
+export const getPreference: GetPreference
