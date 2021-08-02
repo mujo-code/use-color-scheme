@@ -48,7 +48,7 @@
     "babel-plugin-transform-es2015-function-name": "^6.24.1",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "browser-env": "^3.2.6",
-    "eslint": "^6.4.0",
+    "eslint": "^7.32.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
     "nyc": "^14.1.1",
