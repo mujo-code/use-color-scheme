@@ -43,7 +43,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
     "@testing-library/react-hooks": "^5.1.2",
-    "ava": "^2.1.0",
+    "ava": "^5.2.0",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-es2015-function-name": "^6.24.1",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
